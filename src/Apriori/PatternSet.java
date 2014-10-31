@@ -21,6 +21,7 @@ public class PatternSet {
 	}
 	
 	public void put(Pattern key){
+		patterns.remove(key);
 		patterns.add(key);
 	}
 	

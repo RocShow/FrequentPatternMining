@@ -1,7 +1,7 @@
 195 [database system]
 138 [base data]
 129 [database relational]
-117 [learning reinforcement]
+117 [f reinforcement]
 115 [knowledge system]
 111 [knowledge base]
 104 [knowledge discovery]

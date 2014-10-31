@@ -119,6 +119,7 @@ public class Apriori {
 		int total = 0;
 		//System.out.println("Mining L" + i++);
 		PatternSet patterns = getL1candidates().getNextLevelPatternSet();
+		//PatternSet patterns = getL1candidates();
 		while(patterns.size() > 1){
 			//System.out.println("Mining Finish, got " + patterns.size() + " patterns.");
 			total += patterns.size();
@@ -234,19 +235,6 @@ public class Apriori {
 			mps.writeToFile("max/max-" + i + ".txt");
 			System.out.println("Mining topic-" + i + " Finished.");
 		}
-		System.out.println("\n\n***********Finished***********");
-//		
-//		Apriori a2 = new Apriori(0.005f, "topic-2.txt","pattern-2.txt");
-//		PatternSet ps2 = a2.mining();
-//		a2.writeToFile(ps2);
-//		
-//		Apriori a3 = new Apriori(0.005f, "topic-3.txt","pattern-3.txt");
-//		PatternSet ps3 = a3.mining();
-//		a3.writeToFile(ps3);
-//		
-//		Apriori a4 = new Apriori(0.005f, "topic-4.txt","pattern-4.txt");
-//		PatternSet ps4 = a4.mining();
-//		a4.writeToFile(ps4);
-		
+		System.out.println("\n\n***********Finished***********");		
 	}
 }

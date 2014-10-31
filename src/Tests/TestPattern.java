@@ -10,5 +10,6 @@ public class TestPattern {
 		Integer[] data2 = {2,3};
 		Pattern p2 = new Pattern(data2);
 		System.out.println(p2.isSubPatternOf(p1));
+		System.out.println(p2.equals(p1));
 	}
 }
