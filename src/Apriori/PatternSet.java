@@ -1,3 +1,7 @@
+package Apriori;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
@@ -122,5 +126,13 @@ public class PatternSet {
 			sb.append(p.toString() + "\n");
 		}
 		return sb.toString();
+	}
+
+	public void writeToFile(String outputFile){
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))){
+			bw.write(toSortedString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,3 +1,4 @@
+package Apriori;
 import java.util.HashSet;
 
 public class Record {

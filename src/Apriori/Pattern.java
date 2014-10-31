@@ -1,3 +1,4 @@
+package Apriori;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
@@ -124,12 +125,28 @@ public class Pattern {
 	public String toString(){
 		StringBuffer sb = new StringBuffer();
 		sb.append(sup + " [");
-		for(int i : terms){
-			if(i == terms.length - 1)
-				break;
-			sb.append(dict[i] + " ");
+		for(int i = 0; i < terms.length - 1; i++){
+			sb.append(dict[terms[i]] + " ");
 		}
 		sb.append(dict[terms[terms.length - 1]] +"]");
 		return sb.toString();
+	}
+	
+	public HashSet<Integer> getTermSet(){
+		HashSet<Integer> set = new HashSet<Integer>();
+		for(int i = 0; i < terms.length; i++){
+			set.add(terms[i]);
+		}
+		return set;
+	}
+	
+	public boolean isSubPatternOf(Pattern p){
+		HashSet<Integer> set = p.getTermSet();
+		for(int i = 0; i < terms.length; i++){
+			if(!set.contains(terms[i])){
+				return false;
+			}
+		}
+		return true;
 	}
 }
