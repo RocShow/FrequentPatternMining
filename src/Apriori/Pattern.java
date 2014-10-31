@@ -1,13 +1,24 @@
 package Apriori;
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Pattern {
 	private Integer[] terms;
 	private int sup;
 	private String[] dict = Apriori.dict;
+	private double purity;
+	private static int[][] dTable = {
+		{10047,17326,17988,17999,17820},
+		{17326,9674,17446,17902,17486},
+		{17988,17446,9959,18077,17492},
+		{17999,17902,18077,10161,17912},
+		{17820,17486,17492,17912,9845}
+	};
+	private static DecimalFormat df = new DecimalFormat("0.0000");
 	
 	public Pattern(int term, int support) {
 		terms = new Integer[1];
@@ -112,6 +123,8 @@ public class Pattern {
 		return result;
 	}
 	
+	
+	
 	public boolean isValid(PatternSet ps){
 		Pattern[] sub = getSubPatterns().getPatterns();
 		for(Pattern p : sub){
@@ -148,5 +161,56 @@ public class Pattern {
 			}
 		}
 		return true;
+	}
+	
+	public int frequencyInTopic(LinkedList<Record> records){
+		Iterator<Record> it = records.iterator();
+		int count = 0;
+		while(it.hasNext()){
+			Record r = it.next();
+			if(r.containPattern(this)){
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	public void getPurity(int topic, LinkedList<Record> t1,LinkedList<Record> t2,LinkedList<Record> t3,LinkedList<Record> t4){
+		int[] topics = new int[4];
+		for(int i = 0, j = 0; i < 5; i++){
+			if(i != topic){
+				topics[j++] = i;
+			}
+		}
+		int ftp = sup;
+		LinkedList<Double> logFtps = new LinkedList<Double>();
+//		int f = frequencyInTopic(t1);
+//		int d = dTable[topic][topics[0]];
+//		double m = (double)(ftp + frequencyInTopic(t1))/dTable[topic][topics[0]];
+		logFtps.add((double)(ftp + frequencyInTopic(t1))/dTable[topic][topics[0]]);
+		logFtps.add((double)(ftp + frequencyInTopic(t2))/dTable[topic][topics[1]]);
+		logFtps.add((double)(ftp + frequencyInTopic(t3))/dTable[topic][topics[2]]);
+		logFtps.add((double)(ftp + frequencyInTopic(t4))/dTable[topic][topics[3]]);
+		Collections.sort(logFtps);
+		Double maxLogFtp = logFtps.get(logFtps.size() - 1);
+		purity = Math.log((double)ftp/dTable[topic][topic]/maxLogFtp);
+	}
+	
+	public double getPurity(){
+		return purity;
+	}
+	
+	public double getSupPurity(){
+		return (double) sup / Apriori.getRecords().size() * 0.5 + purity * 0.5;
+	}
+	
+	public String toStringBySupPurity(){
+		StringBuffer sb = new StringBuffer();
+		sb.append(df.format(purity) + " [");
+		for(int i = 0; i < terms.length - 1; i++){
+			sb.append(dict[terms[i]] + " ");
+		}
+		sb.append(dict[terms[terms.length - 1]] +"]");
+		return sb.toString();
 	}
 }

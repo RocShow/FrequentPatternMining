@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -128,6 +129,16 @@ public class PatternSet {
 		}
 		return sb.toString();
 	}
+	
+	public String toSortedStringBySupPurity(){
+		StringBuffer sb = new StringBuffer();
+		Iterator<Pattern> it = toSortedListBySupPurity().iterator();
+		while (it.hasNext()){
+			Pattern p = it.next();
+			sb.append(p.toStringBySupPurity() + "\n");
+		}
+		return sb.toString();
+	}
 
 	public void writeToFile(String outputFile){
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))){
@@ -135,5 +146,38 @@ public class PatternSet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void writePurityToFile(String outputFile){
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))){
+			bw.write(toSortedStringBySupPurity());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public LinkedList<Pattern> toSortedListBySupPurity(){
+		LinkedList<Pattern> list = toList();
+		Collections.sort(list, new Comparator<Pattern>() {
+			public int compare(Pattern o1, Pattern o2) {
+				double diff = o2.getSupPurity() - o1.getSupPurity();
+				if(diff > 0){
+					return 1;
+				} else if(diff == 0){
+					return 0;
+				} else {
+					return -1;
+				}
+			}
+		});
+		return list;
+	}
+	
+	public LinkedList<Pattern> getPurity(int topic, LinkedList<Record> t1,LinkedList<Record> t2,LinkedList<Record> t3,LinkedList<Record> t4){
+		Iterator<Pattern> it = patterns.iterator();
+		while(it.hasNext()){
+			it.next().getPurity(topic, t1, t2, t3, t4);
+		}
+		return toSortedListBySupPurity();
 	}
 }

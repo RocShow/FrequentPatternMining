@@ -1,10 +1,10 @@
 0	automatic
-1	a
-2	b
-3	c
-4	d
-5	e
-6	f
+1	acquisition
+2	proof
+3	method
+4	philosophical
+5	formal
+6	learning
 7	theory
 8	low
 9	cost
