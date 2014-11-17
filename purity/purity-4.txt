@@ -1,0 +1,234 @@
+742.5357 query
+365.9163 processing
+277.8170 distributed
+219.4349 control
+182.9783 optimization
+179.7987 query processing
+169.5274 xml
+164.2889 join
+149.3536 real
+129.9924 object
+118.5102 index
+117.0803 performance
+116.7112 parallel
+114.4430 database query
+114.3129 scheduling
+99.3776 query optimization
+96.5147 memory
+95.3565 file
+93.8532 view
+86.7400 real time
+86.1655 storage
+77.8532 query data
+77.1737 sql
+76.4001 concurrency
+74.0321 transaction
+71.2302 query efficient
+69.0488 access
+68.9324 recovery
+62.6136 aggregate
+62.1289 database distributed
+62.0392 peer
+61.4647 control concurrency
+60.2660 query xml
+57.1260 system distributed
+55.2313 server
+52.8482 moving
+49.9760 disk
+48.8271 object query
+48.2527 expansion
+46.6689 evaluation query
+45.3805 data processing
+45.2562 system query
+44.1464 data distributed
+43.4247 xml data
+43.0828 load
+42.0792 processor
+41.3595 nested
+40.7850 query distributed
+40.2106 camera
+40.2106 processing efficient
+38.4873 database processing
+37.9128 locking
+37.9128 olap
+36.3778 querying
+35.6151 system processing
+35.2010 optimizing
+35.0406 distributed processing
+34.4662 query expansion
+34.4662 database control
+34.2744 cache
+33.8918 xpath
+33.6757 sensor
+32.7429 stream processing
+32.5693 database system distributed
+32.1685 materialized
+32.1685 query stream
+32.1685 xml efficient
+31.7711 database performance
+31.5940 query view
+31.5305 protocol
+31.0941 stereo
+31.0196 xquery
+31.0196 query continuous
+30.6693 spatial
+30.4452 object moving
+30.0490 warehouse
+29.2963 materialized view
+29.0472 range
+28.7218 replication
+28.7218 query processing efficient
+28.1474 buffer
+28.1474 database concurrency
+28.1120 query answering
+27.7496 shape
+27.5730 replicated
+27.2429 database efficient
+26.4241 query join
+26.3987 broadcast
+25.8497 query network
+25.8497 database control concurrency
+25.1311 database object
+24.7008 system time
+24.5439 client
+24.4115 adaptive
+24.2067 scalable
+24.1263 database query processing
+23.8787 complex
+23.7924 using query
+23.7270 multi query
+23.7172 external
+23.5519 system control
+22.9775 placement
+22.9775 query relational
+22.8690 signature
+22.6437 data warehouse
+22.4030 multiprocessor
+22.3749 balancing
+21.9728 hash
+21.9111 db2
+21.6212 evaluation performance
+21.3924 shared
+21.3720 database spatial
+21.3180 data access
+20.5503 self
+20.4516 rewriting
+20.0471 caching
+19.6098 calibration
+19.4167 wireless
+19.3887 execution
+19.3589 system performance
+19.0416 allocation
+18.4966 oracle
+18.4863 network sensor
+17.6778 database system
+17.6770 evaluation
+17.6201 size
+17.2836 structure index
+17.2306 extensible
+16.4150 operation
+16.0616 monitoring
+15.8844 architecture
+15.5795 motion
+12.9972 routing
+12.8679 supporting
+12.0428 dynamic
+12.0181 based query
+11.9440 multidimensional
+11.3668 resource
+11.2408 consistency
+10.5072 surface
+9.8417 streaming
+9.7867 top
+9.4926 recursive
+9.0156 continuous
+8.7224 aggregation
+8.6354 database object system
+8.6134 database data
+8.3028 organization
+7.9708 object system
+7.7217 uncertain
+7.6430 object oriented
+7.5563 database object oriented
+7.1791 sharing
+6.9222 managing
+6.6559 technique
+6.6179 update
+3.5205 environment
+3.3810 reconstruction
+2.0344 database oriented
+1.4885 global
+0.6987 strategy
+0.4110 management data
+-0.3519 heterogeneous
+-1.3081 window
+-1.4106 data efficient
+-3.8553 system data
+-5.8677 database management
+-7.0355 oriented
+-10.0294 video
+-11.4687 system management
+-11.6660 implementation
+-12.5282 scheme
+-13.0420 cost
+-13.1094 database approach
+-14.3435 effective
+-14.3807 mechanism
+-15.3710 dbms
+-17.2780 tracking
+-18.5739 answering
+-20.6548 stream
+-21.3434 hybrid
+-22.3004 source
+-22.6157 integration
+-22.8915 modeling
+-23.4867 computation
+-24.7794 visual
+-24.8117 data stream
+-25.8276 management
+-28.2375 based system
+-28.8552 complexity
+-29.6884 computing
+-29.7666 structure
+-30.5212 mobile
+-30.6090 database relational
+-31.4914 framework
+-32.5151 result
+-32.8771 estimation
+-33.3818 indexing
+-36.6328 robust
+-36.7942 towards
+-40.5933 efficient
+-44.7824 approximate
+-46.3503 matching
+-47.7040 multiple
+-51.8630 support
+-53.0138 probabilistic
+-58.3643 detection
+-59.8909 temporal
+-64.6164 multi
+-64.6926 database
+-64.8238 fast
+-66.5354 base
+-67.3000 optimal
+-68.0219 image
+-73.4622 application
+-75.1098 semantic
+-75.3485 approach
+-78.6053 analysis
+-80.3687 language
+-86.6826 design
+-86.7919 document
+-87.0004 selection
+-90.2119 constraint
+-90.8608 method
+-97.2798 relational
+-120.3805 network
+-129.4569 tree
+-138.8767 time
+-149.1386 system
+-168.0331 model
+-220.9284 data
+-232.3276 based
+-259.3157 using
+-272.6697 algorithm

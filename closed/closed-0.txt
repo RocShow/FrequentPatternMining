@@ -1,44 +1,237 @@
-413 [mining data]
-233 [rule association]
-203 [mining pattern]
-194 [time series]
-159 [rule mining]
-159 [mining association]
-141 [data stream]
-127 [mining frequent]
-123 [rule mining association]
-116 [algorithm approximation]
-108 [clustering data]
-107 [algorithm efficient]
-88 [algorithm mining]
-87 [data set]
-87 [algorithm data]
-86 [dimensional data]
-77 [frequent pattern]
-76 [algorithm graph]
-74 [decision tree]
-73 [based data]
-70 [time data]
-70 [privacy preserving]
-69 [mining efficient]
-69 [data efficient]
-65 [data pattern]
-65 [using data]
-64 [algorithm time]
-63 [data privacy]
-59 [algorithm fast]
-57 [mining graph]
-57 [bound lower]
-56 [dimensionality reduction]
-54 [clustering algorithm]
-54 [sequential pattern]
-54 [based mining]
-54 [algorithm optimal]
-54 [based algorithm]
-54 [using mining]
-54 [tree algorithm]
-52 [analysis data]
-52 [search similarity]
-52 [tree data]
-51 [tree search]
-51 [mining stream]
+1288 data
+1163 mining
+1087 algorithm
+720 graph
+560 time
+528 pattern
+509 tree
+488 efficient
+416 rule
+413 mining data
+374 search
+336 association
+328 using
+320 clustering
+304 approximation
+291 based
+290 set
+279 optimal
+253 fast
+242 dimensional
+233 rule association
+230 random
+227 frequent
+227 space
+227 finding
+222 detection
+211 stream
+209 series
+204 similarity
+203 mining pattern
+202 path
+194 time series
+182 bound
+181 analysis
+175 matching
+170 approximate
+161 metric
+159 mining association
+159 rule mining
+157 dynamic
+153 application
+149 discovering
+145 reduction
+142 method
+141 data stream
+141 indexing
+140 linear
+138 sequence
+135 preserving
+134 distance
+128 privacy
+127 mining frequent
+125 improved
+123 via
+123 rule mining association
+122 local
+122 cluster
+120 discovery
+118 maximum
+117 technique
+117 minimum
+116 algorithm approximation
+115 sequential
+113 decision
+113 computing
+108 clustering data
+107 constraint
+107 algorithm efficient
+106 expression
+102 sampling
+102 temporal
+102 polynomial
+97 computation
+93 value
+92 database
+92 sparse
+90 dimension
+90 matrix
+89 structure
+88 algorithm mining
+87 scheme
+87 data set
+87 algorithm data
+86 planar
+86 weighted
+86 map
+86 dimensional data
+85 function
+85 datasets
+83 spatial
+83 attribute
+83 flow
+80 estimation
+77 dimensionality
+77 frequent pattern
+76 algorithm graph
+76 simple
+75 outlier
+75 genetic
+74 decision tree
+74 online
+73 measure
+73 line
+73 based data
+70 privacy preserving
+70 extended
+70 time data
+69 edge
+69 free
+69 mining efficient
+69 data efficient
+69 generalized
+68 closed
+66 geometric
+66 correlation
+66 heuristic
+66 approximating
+66 abstract
+65 string
+65 data pattern
+65 using data
+64 representation
+64 algorithm time
+64 bounded
+63 field
+63 data privacy
+63 lower
+63 partitioning
+63 incremental
+63 searching
+62 itemsets
+62 complexity
+61 entropy
+61 binary
+61 length
+61 parallel
+60 induction
+60 construction
+60 error
+59 algorithm fast
+59 near
+59 massive
+58 event
+57 bound lower
+57 compression
+57 testing
+57 partial
+57 decomposition
+57 multi
+57 mining graph
+56 directed
+56 gene
+56 dimensionality reduction
+56 efficiently
+55 classification
+54 algorithm optimal
+54 tree algorithm
+54 using mining
+54 sequential pattern
+54 clustering algorithm
+54 based mining
+54 based algorithm
+53 sense
+53 convex
+53 minimal
+52 structured
+52 search similarity
+52 detecting
+52 solution
+52 subspace
+52 tree data
+52 analysis data
+51 statistical
+51 pruning
+51 tree search
+51 mining stream
+50 distribution
+50 independent
+49 mining frequent pattern
+49 extended abstract
+49 rule algorithm
+48 cube
+48 time data series
+48 location
+48 programming
+48 rule data
+47 shape
+47 time mining
+47 sequential mining
+47 framework
+47 statistic
+47 item
+47 connectivity
+46 cost
+46 data preserving
+46 change
+46 mining set
+46 multiple
+46 shortest
+46 scale
+46 cut
+45 categorical
+45 frequent itemsets
+45 sat
+45 max
+45 generation
+45 combinatorial
+45 algorithm improved
+44 maximal
+44 towards
+44 partition
+44 discrete
+44 constrained
+44 network
+44 anomaly
+43 randomized
+43 itemset
+43 based clustering
+43 generating
+42 walk
+42 application data
+42 sequential mining pattern
+41 average
+41 packing
+41 hierarchical
+41 tree pattern
+41 efficient pattern
+41 algorithm genetic
+40 projection
+40 interval
+40 path shortest
+40 random graph
+40 subsequence
+40 using algorithm
+40 tree mining
+40 visualization
+40 spanning

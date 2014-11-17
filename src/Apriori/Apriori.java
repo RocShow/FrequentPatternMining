@@ -1,4 +1,5 @@
 package Apriori;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,50 +11,50 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Apriori {
-	
-	interface LineHandler{
+
+	interface LineHandler {
 		void process(String line);
 	}
-	
+
 	private static final int dictSize = 12220;
 	public static int minSup;
-	
+
 	public static String[] dict;
 	private static LinkedList<Record> records;
 	private String dictFile = "vocab.txt";
 	private String recordsFile;
-	
-	public Apriori(int min, String fileName){
+
+	public Apriori(int min, String fileName) {
 		records = new LinkedList<Record>();
 		recordsFile = fileName;
 		dict = new String[dictSize];
 		minSup = min;
-		
+
 		readDict();
 		readRecords();
 	}
-	
-	public Apriori(float min, String fileName){
+
+	public Apriori(float min, String fileName) {
 		records = new LinkedList<Record>();
 		recordsFile = fileName;
 		dict = new String[dictSize];
 
 		readDict();
 		readRecords();
-		
-		minSup = (int)(records.size() * min);
-		
+
+		minSup = (int) (records.size() * min);
+
 	}
-	
-	public static LinkedList<Record> getRecords(){
+
+	public static LinkedList<Record> getRecords() {
 		return records;
 	}
-	
-	private void readDict(){
+
+	private void readDict() {
 		int lineCount = 0;
-		try(BufferedReader br = new BufferedReader(new FileReader(dictFile))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(dictFile))) {
 			String line = "";
-			while ((line = br.readLine()) != null){
+			while ((line = br.readLine()) != null) {
 				dict[lineCount++] = line.split("\t")[1];
 			}
 		} catch (FileNotFoundException e) {
@@ -62,11 +63,11 @@ public class Apriori {
 			e.printStackTrace();
 		}
 	}
-	
-	private void readRecords(){
-		try(BufferedReader br = new BufferedReader(new FileReader(recordsFile))) {
+
+	private void readRecords() {
+		try (BufferedReader br = new BufferedReader(new FileReader(recordsFile))) {
 			String line = "";
-			while ((line = br.readLine()) != null){
+			while ((line = br.readLine()) != null) {
 				records.push(new Record(line));
 			}
 		} catch (FileNotFoundException e) {
@@ -75,69 +76,67 @@ public class Apriori {
 			e.printStackTrace();
 		}
 	}
-	
-	public PatternSet getL1candidates(){
+
+	public PatternSet getL1candidates() {
 		HashMap<Pattern, Integer> temp = new HashMap<Pattern, Integer>();
 		PatternSet result = new PatternSet();
 		Iterator<Record> it = records.iterator();
 		Integer[] words;
-		while(it.hasNext()){
+		while (it.hasNext()) {
 			words = it.next().getTerms();
-			for(int w : words){
+			for (int w : words) {
 				Pattern p = new Pattern(w);
 				int count = temp.get(p) == null ? 1 : temp.get(p) + 1;
 				p.setSup(count);
 				temp.put(p, count);
-				if (count >= minSup){
+				if (count >= minSup) {
 					result.put(p);
 				}
 			}
 		}
 		return result;
 	}
-		
-	public PatternSet mining(){
+
+	public PatternSet mining() {
 		PatternSet result = new PatternSet();
 		int total = 0;
-		//System.out.println("Mining L" + i++);
-		//PatternSet patterns = getL1candidates().getNextLevelPatternSet();
 		PatternSet patterns = getL1candidates();
-		while(patterns.size() > 1){
-			//System.out.println("Mining Finish, got " + patterns.size() + " patterns.");
+		while (patterns.size() > 1) {
 			total += patterns.size();
 			result.addAll(patterns);
 			patterns = patterns.getNextLevelPatternSet();
-			//System.out.println();
 		}
-		if(patterns.size() == 1){
+		if (patterns.size() == 1) {
 			total += patterns.size();
 			result.addAll(patterns);
 		}
 		System.out.println("Total: " + total + " patterns.");
 		return result;
 	}
-	
-	public PatternSet miningClosedPattern(PatternSet ps){
+
+	public PatternSet miningClosedPattern(PatternSet ps) {
 		PatternSet result = new PatternSet();
 		LinkedList<Pattern> list = new LinkedList<Pattern>();
 		HashSet<Pattern> helper = new HashSet<Pattern>();
 		Iterator<Pattern> it = ps.keySet().iterator();
-		while(it.hasNext()){
+		while (it.hasNext()) {
 			Pattern p = it.next();
 			boolean toAdd = true;
-			for(int i = 0; i < list.size();){
+			for (int i = 0; i < list.size();) {
 				Pattern pInResults = list.get(i);
-				if(p.getSup() == pInResults.getSup() && p.isSubPatternOf(pInResults)){
+				if (p.getSup() == pInResults.getSup()
+						&& p.isSubPatternOf(pInResults)) {
 					toAdd = false;
 					break;
 				}
-				if(pInResults.getSup() == p.getSup() && pInResults.isSubPatternOf(p)){
-					if(helper.contains(p)){
-						System.out.println("Pruned:" + pInResults.toString());
+				if (pInResults.getSup() == p.getSup()
+						&& pInResults.isSubPatternOf(p)) {
+					if (helper.contains(p)) {
+						System.out.println("Pruned:" + pInResults.toString() + " as not closed pattern");
 						list.remove(i);
 						helper.remove(pInResults);
 					} else {
-						System.out.println("Pruned:" + pInResults.toString());
+						System.out.println("Pruned:" + pInResults.toString() + " as not closed pattern");
 						list.set(i, p);
 						helper.remove(pInResults);
 						helper.add(p);
@@ -148,41 +147,41 @@ public class Apriori {
 					i++;
 				}
 			}
-			if(toAdd){
+			if (toAdd) {
 				helper.add(p);
 				list.add(p);
 			}
-			
+
 		}
 		it = list.iterator();
-		while(it.hasNext()){
+		while (it.hasNext()) {
 			result.put(it.next());
 		}
 		return result;
 	}
-	
-	public PatternSet miningMaxPattern(PatternSet ps){
+
+	public PatternSet miningMaxPattern(PatternSet ps) {
 		PatternSet result = new PatternSet();
 		LinkedList<Pattern> list = new LinkedList<Pattern>();
 		HashSet<Pattern> helper = new HashSet<Pattern>();
 		Iterator<Pattern> it = ps.keySet().iterator();
-		while(it.hasNext()){
+		while (it.hasNext()) {
 			Pattern p = it.next();
 			boolean toAdd = true;
-			for(int i = 0; i < list.size();){
+			for (int i = 0; i < list.size();) {
 				Pattern pInResults = list.get(i);
-				if(p.isSubPatternOf(pInResults)){
-					System.out.println("Pruned:" + p.toString());
+				if (p.isSubPatternOf(pInResults)) {
+					System.out.println("Pruned:" + p.toString() + " as not max pattern");
 					toAdd = false;
 					break;
 				}
-				if(pInResults.isSubPatternOf(p)){
-					if(helper.contains(p)){
-						System.out.println("Pruned:" + pInResults.toString());
+				if (pInResults.isSubPatternOf(p)) {
+					if (helper.contains(p)) {
+						System.out.println("Pruned:" + pInResults.toString() + " as not max pattern");
 						list.remove(i);
 						helper.remove(pInResults);
 					} else {
-						System.out.println("Pruned:" + pInResults.toString());
+						System.out.println("Pruned:" + pInResults.toString() + " as not max pattern");
 						list.set(i, p);
 						helper.remove(pInResults);
 						helper.add(p);
@@ -193,42 +192,51 @@ public class Apriori {
 					i++;
 				}
 			}
-			if(toAdd){
+			if (toAdd) {
 				helper.add(p);
 				list.add(p);
 			}
-			
+
 		}
 		it = list.iterator();
-		while(it.hasNext()){
+		while (it.hasNext()) {
 			result.put(it.next());
 		}
 		return result;
 	}
-		
+
 	public static void main(String[] args) {
+		// Separately store records from 5 files.
 		ArrayList<LinkedList<Record>> topics = new ArrayList<LinkedList<Record>>();
+		// Separately store mined frequent patterns for 5 topics
 		ArrayList<PatternSet> pss = new ArrayList<PatternSet>();
-		for(int i = 0; i < 5; i++){
-			Apriori a = new Apriori(50, "topic-" + i + ".txt");
-			topics.add(a.getRecords());
+
+		// Mine frequent patterns, closed patterns and max patterns
+		for (int i = 0; i < 5; i++) {
+			Apriori a = new Apriori(0.004f, "topic-" + i + ".txt");
+			topics.add(Apriori.getRecords());
 			PatternSet ps = a.mining();
 			pss.add(ps);
+			// Mine closed patterns
 			PatternSet cps = a.miningClosedPattern(ps);
+			// Mine max patterns
 			PatternSet mps = a.miningMaxPattern(ps);
-			ps.writeToFile("pattern-" + i + ".txt");
+			// Write three kinds of result to files separately 
+			ps.writeToFile("patterns/pattern-" + i + ".txt");
 			cps.writeToFile("closed/closed-" + i + ".txt");
 			mps.writeToFile("max/max-" + i + ".txt");
 			System.out.println("Mining topic-" + i + " Finished.");
 		}
 		System.out.println("\n\n***********Frequent Pattern Mining Finished***********\n\n");
-		
-		//mining purity
+
+		// Computing purity
 		LinkedList<Record> t0 = topics.get(0);
 		LinkedList<Record> t1 = topics.get(1);
 		LinkedList<Record> t2 = topics.get(2);
 		LinkedList<Record> t3 = topics.get(3);
 		LinkedList<Record> t4 = topics.get(4);
+		//pss refers to mined frequent patterns
+		//purity is stored in Pattern class 
 		PatternSet pss0 = pss.get(0);
 		PatternSet pss1 = pss.get(1);
 		PatternSet pss2 = pss.get(2);

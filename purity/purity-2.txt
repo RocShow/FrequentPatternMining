@@ -1,0 +1,248 @@
+687.3370 web
+624.5460 retrieval
+602.0873 information
+266.3010 information retrieval
+217.3823 document
+215.8440 user
+178.7297 semantic
+149.6892 service
+139.3557 agent
+127.8245 natural
+117.7983 search
+105.5917 language
+104.3585 content
+100.9141 relevance
+99.2322 term
+96.9896 web search
+95.3077 language natural
+86.8982 feedback
+86.8982 based retrieval
+82.9738 collaborative
+82.4132 system retrieval
+79.7856 interface
+79.0494 retrieval document
+78.8995 context
+69.9539 engine
+68.3973 search engine
+67.8367 question
+67.8324 system information
+65.5941 service web
+65.2345 filtering
+61.1091 based web
+60.4867 page
+60.4852 interactive
+59.9878 web page
+58.3059 semantic web
+52.8505 based information
+52.6996 site
+52.6936 generation
+50.4570 theoretic
+49.3358 model retrieval
+48.3794 collection
+46.5326 retrieval text
+46.2727 driven
+45.9720 digital
+44.2901 browsing
+44.2901 web information
+43.3658 automatic
+43.1688 answering question
+43.1688 language retrieval
+42.6082 system information retrieval
+42.0475 annotation
+42.0475 language information
+41.5592 understanding
+40.9263 using web
+40.9263 retrieval image
+40.3656 relevance feedback
+39.8660 based content
+39.1779 building
+38.6837 information extraction
+38.1231 filtering collaborative
+37.5625 personalized
+36.4912 topic
+36.4412 web site
+36.4412 keyword
+36.4412 corpus
+36.0578 using information
+35.3199 web query
+35.3199 using retrieval
+35.0597 model information
+34.7058 word
+33.6380 web application
+33.6380 news
+33.5285 cross
+33.2310 social
+33.0774 web mining
+32.8049 extracting
+32.5168 music
+32.5168 retrieval content
+31.9561 library
+31.3955 web document
+30.8349 language information retrieval
+30.8349 user interface
+30.5231 summarization
+30.4508 result
+29.7160 result search
+29.6708 based document
+29.1530 query retrieval
+29.1530 web user
+28.0317 information document
+27.7206 recommendation
+27.4711 chinese
+27.4711 based information retrieval
+27.4177 based search
+26.9104 web data
+26.3498 approach retrieval
+26.3498 based user
+25.9142 community
+25.7892 information text
+25.7892 model information retrieval
+25.7892 evaluation retrieval
+25.6108 platform
+25.2285 enterprise
+24.7999 implicit
+24.7318 personal
+24.6679 web content
+24.5470 modelling
+24.1073 language cross
+24.1073 web retrieval
+23.8314 phrase
+23.7231 quality
+23.5466 query search
+23.5466 based retrieval content
+23.5466 web system
+22.9860 commerce
+22.4253 user information
+22.4253 system user
+22.4027 electronic
+22.2384 language model
+22.1059 based semantic
+21.9771 uncertainty
+21.8005 robot
+21.7117 sentence
+21.1610 parsing
+21.1412 system document
+20.9232 behavior
+20.9076 information approach
+20.8752 ontology
+20.8394 multi agent
+20.4046 internet
+20.0066 grammar
+19.8918 scale
+19.7761 study
+18.9736 mobile
+18.7598 integrated
+18.6316 specific
+18.2526 navigation
+18.1595 effectiveness
+17.8609 multimedia
+17.7160 demonstration
+17.4652 language system
+17.1618 towards
+17.1345 cognitive
+16.3560 cooperative
+16.3028 link
+16.2254 development
+15.8615 profile
+15.6569 relevant
+13.8250 log
+12.1403 exploration
+11.9257 based approach
+11.1964 based language
+10.5167 wide
+10.2402 evaluating
+9.2369 task
+8.9996 summary
+8.8627 source
+8.8533 generating
+7.9137 interaction
+7.3581 searching
+7.0632 experiment
+6.4281 extraction
+6.1273 structured
+5.8332 intelligent
+5.4322 answer
+4.6667 language query
+4.1963 translation
+3.3038 effective
+3.1257 based system
+3.0591 world
+2.8984 test
+2.6963 interpretation
+1.4716 answering
+1.0602 latent
+-0.5758 automated
+-0.9448 based image
+-1.9111 improve
+-2.8729 measure
+-3.2654 technology
+-4.0768 visualization
+-5.5018 video
+-5.8306 speech
+-5.8398 relationship
+-5.9365 challenge
+-6.6460 independent
+-7.1783 location
+-8.7894 text
+-10.6094 integration
+-10.8621 modeling
+-12.4031 software
+-13.8523 research
+-16.0549 visual
+-17.4967 statistical
+-18.4803 level
+-18.8761 ranking
+-19.4483 strategy
+-20.6004 acquisition
+-23.7811 based model
+-25.6554 tool
+-25.7119 indexing
+-28.3590 expert
+-29.0854 prediction
+-29.5751 online
+-29.8767 improving
+-31.9535 environment
+-32.1021 semantics
+-32.2721 cluster
+-34.5959 architecture
+-35.1592 framework
+-36.9926 based
+-38.3487 concept
+-41.5572 approach
+-44.1420 matching
+-45.2685 adaptive
+-48.1592 oriented
+-49.2022 image
+-49.2364 multiple
+-50.6139 structure
+-51.8712 application
+-52.3039 discovery
+-52.5001 abstract
+-52.5789 domain
+-52.6278 similarity
+-52.7424 schema
+-55.2582 probabilistic
+-56.3074 support
+-58.4714 evaluation
+-58.8170 dynamic
+-60.1973 access
+-62.6358 analysis
+-63.6266 management
+-67.7722 planning
+-70.3082 design
+-70.5248 multi
+-76.9064 method
+-76.9677 mining data
+-78.0488 performance
+-96.9890 network
+-106.0950 clustering
+-116.8798 xml
+-128.6941 classification
+-154.4233 system
+-162.5534 knowledge
+-208.3603 database
+-218.7516 model
+-256.4224 mining
+-290.4246 using
+-297.1425 data
+-380.4741 query

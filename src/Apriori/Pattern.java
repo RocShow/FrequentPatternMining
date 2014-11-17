@@ -137,11 +137,11 @@ public class Pattern {
 	
 	public String toString(){
 		StringBuffer sb = new StringBuffer();
-		sb.append(sup + " [");
+		sb.append(sup + " ");
 		for(int i = 0; i < terms.length - 1; i++){
 			sb.append(dict[terms[i]] + " ");
 		}
-		sb.append(dict[terms[terms.length - 1]] +"]");
+		sb.append(dict[terms[terms.length - 1]]);
 		return sb.toString();
 	}
 	
@@ -184,9 +184,6 @@ public class Pattern {
 		}
 		int ftp = sup;
 		LinkedList<Double> logFtps = new LinkedList<Double>();
-//		int f = frequencyInTopic(t1);
-//		int d = dTable[topic][topics[0]];
-//		double m = (double)(ftp + frequencyInTopic(t1))/dTable[topic][topics[0]];
 		logFtps.add((double)(ftp + frequencyInTopic(t1))/dTable[topic][topics[0]]);
 		logFtps.add((double)(ftp + frequencyInTopic(t2))/dTable[topic][topics[1]]);
 		logFtps.add((double)(ftp + frequencyInTopic(t3))/dTable[topic][topics[2]]);
@@ -201,16 +198,16 @@ public class Pattern {
 	}
 	
 	public double getSupPurity(){
-		return (double) sup / Apriori.getRecords().size() * 0.5 + purity * 0.5;
+		return (double) sup * purity;
 	}
 	
 	public String toStringBySupPurity(){
 		StringBuffer sb = new StringBuffer();
-		sb.append(df.format(purity) + " [");
+		sb.append(df.format(getSupPurity()) + " ");
 		for(int i = 0; i < terms.length - 1; i++){
 			sb.append(dict[terms[i]] + " ");
 		}
-		sb.append(dict[terms[terms.length - 1]] +"]");
+		sb.append(dict[terms[terms.length - 1]]);
 		return sb.toString();
 	}
 }
